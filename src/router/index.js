@@ -204,7 +204,7 @@ export const asyncRoutes = [
         path: 'create',
         component: () => import('@/views/example/create'),
         name: 'CreateArticle',
-        //meta: { title: '入库管理', icon: 'edit' }
+        // meta: { title: '入库管理', icon: 'edit' }
         meta: { title: '入库管理', icon: 'list' }
 
       },
