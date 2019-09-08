@@ -1,8 +1,8 @@
 <template>
   <div class="app-container">
     <div class="filter-container">
-      <el-input  v-model="listQuery.title"  placeholder="po" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter" />
-      <el-input  v-model="listQuery.sku"  placeholder="sku" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter" />
+      <el-input v-model="listQuery.title" placeholder="po" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter" />
+      <el-input v-model="listQuery.sku" placeholder="sku" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter" />
       <el-button v-waves class="filter-item" type="primary" icon="el-icon-search" @click="handleFilter">
         查询
       </el-button>
@@ -11,7 +11,7 @@
       </el-button>
       <el-button class="filter-item" style="margin-left: 10px;" type="primary" icon="el-icon-edit" @click="handleCreate">
         导入
-      </el-button>      
+      </el-button>
     </div>
 
     <el-table :key="tableKey" v-loading="listLoading" :data="list" border fit highlight-current-row style="width: 85%;" @sort-change="sortChange">
@@ -32,53 +32,53 @@
       </el-table-column>
       <el-table-column label="物料号" width="110px" align="center">
         <template slot-scope="scope">
-          <span>{{ scope.row.customsMeterialNo }}</span> 
+          <span>{{ scope.row.customsMeterialNo }}</span>
         </template>
       </el-table-column>
       <el-table-column label="总库存毛重" width="110px" align="center">
         <template slot-scope="scope">
-          <span>{{ scope.row.stockGw }}</span> 
+          <span>{{ scope.row.stockGw }}</span>
         </template>
       </el-table-column>
       <el-table-column label="供应商名称" width="110px" align="center">
         <template slot-scope="scope">
-          <span>{{ scope.row.supplierName }}</span> 
+          <span>{{ scope.row.supplierName }}</span>
         </template>
       </el-table-column>
       <el-table-column label="so" width="110px" align="center">
         <template slot-scope="scope">
-          <span>{{ scope.row.so }}</span> 
+          <span>{{ scope.row.so }}</span>
         </template>
       </el-table-column>
       <el-table-column label="收货日期" width="110px" align="center">
         <template slot-scope="scope">
-          <span>{{ scope.row.rcvdDate }}</span> 
+          <span>{{ scope.row.rcvdDate }}</span>
         </template>
-      </el-table-column>            
+      </el-table-column>
       <el-table-column label="实收箱数" width="110px" align="center">
         <template slot-scope="scope">
-          <span>{{ scope.row.rcvdCtns }}</span> 
+          <span>{{ scope.row.rcvdCtns }}</span>
         </template>
       </el-table-column>
       <el-table-column label="实收件数" width="110px" align="center">
         <template slot-scope="scope">
-          <span>{{ scope.row.rcvdPcs }}</span> 
+          <span>{{ scope.row.rcvdPcs }}</span>
         </template>
       </el-table-column>
       <el-table-column label="报关单号" width="110px" align="center">
         <template slot-scope="scope">
-          <span>{{ scope.row.merchName }}</span> 
+          <span>{{ scope.row.merchName }}</span>
         </template>
       </el-table-column>
       <el-table-column label="一箱几件" width="110px" align="center">
         <template slot-scope="scope">
-          <span>{{ scope.row.itemsPerBox }}</span> 
+          <span>{{ scope.row.itemsPerBox }}</span>
         </template>
-      </el-table-column> 
+      </el-table-column>
 
       <el-table-column label="Actions" align="center" width="200" class-name="small-padding fixed-width">
         <template slot-scope="{row}">
-          <el-button type="primary" size="mini"  @click="handleUpdate(row)">
+          <el-button type="primary" size="mini" @click="handleUpdate(row)">
             修改
           </el-button>
           <el-button type="primary" size="mini" align="center" @click="handleUpdate(row)">
@@ -94,7 +94,7 @@
     <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible">
       <el-form ref="dataForm" :rules="rules" :model="temp" label-position="left" label-width="120px" style="width: 1000px; margin-left:30px;">
         <el-row>
-          <el-col :span="10" >
+          <el-col :span="10">
             <el-form-item label="PO:" prop="title" class="postInfo-container-item">
               <el-input v-model="temp.po" />
             </el-form-item>
@@ -106,7 +106,7 @@
           </el-col>
         </el-row>
         <el-row>
-          <el-col :span="10" >
+          <el-col :span="10">
             <el-form-item label="入仓号:" prop="title" class="postInfo-container-item">
               <el-input v-model="temp.inboundNo" />
             </el-form-item>
@@ -118,7 +118,7 @@
           </el-col>
         </el-row>
         <el-row>
-          <el-col :span="10" >
+          <el-col :span="10">
             <el-form-item label="报关单件净重:" prop="title" class="postInfo-container-item">
               <el-input v-model="temp.title" />
             </el-form-item>
@@ -129,11 +129,11 @@
             </el-form-item>
           </el-col>
         </el-row>
-        
+
       </el-form>
 
-      <div slot="footer"  align="center" class="dialog-footer">
-        <el-button  @click="dialogFormVisible = false">
+      <div slot="footer" align="center" class="dialog-footer">
+        <el-button @click="dialogFormVisible = false">
           Cancel
         </el-button>
         <el-button type="primary" @click="dialogStatus==='create'?createData():updateData()">
@@ -143,9 +143,8 @@
     </el-dialog>
 
   </div>
-  
-</template>
 
+</template>
 
 <script>
 import { fetchList, fetchPv, createArticle, updateArticle } from '@/api/article'
@@ -188,7 +187,7 @@ export default {
       tableKey: 0,
       list: null,
       total: 0,
-      listLoading: true,  
+      listLoading: true,
       listQuery: {
         page: 1,
         limit: 20,

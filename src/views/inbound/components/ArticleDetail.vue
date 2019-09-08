@@ -14,7 +14,7 @@
                     </el-select>
                   </el-form-item>
                 </el-col>
-               <el-col :span="6">
+                <el-col :span="6">
                   <el-form-item label-width="80px" label="供应商:" class="postInfo-container-item">
                     <el-select v-model="postForm.author" :remote-method="getRemoteUserList" filterable default-first-option remote placeholder="input user">
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
@@ -27,7 +27,7 @@
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
                     </el-select>
                   </el-form-item>
-                </el-col>                      
+                </el-col>
               </el-row>
               <el-row>
                 <el-col :span="6">
@@ -37,7 +37,7 @@
                     </el-select>
                   </el-form-item>
                 </el-col>
-               <el-col :span="6">
+                <el-col :span="6">
                   <el-form-item label-width="80px" label="入仓日期:" class="postInfo-container-item">
                     <el-select v-model="postForm.author" :remote-method="getRemoteUserList" filterable default-first-option remote placeholder="input user">
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
@@ -50,16 +50,16 @@
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
                     </el-select>
                   </el-form-item>
-                </el-col>                      
-              </el-row>              
+                </el-col>
+              </el-row>
             </div>
           </el-col>
         </el-row>
-      
+
         <el-row>
 
           <aside>货物信息</aside>
-         <el-col :span="24">
+          <el-col :span="24">
             <div class="postInfo-container">
               <el-row>
                 <el-col :span="6">
@@ -69,7 +69,7 @@
                     </el-select>
                   </el-form-item>
                 </el-col>
-               <el-col :span="6">
+                <el-col :span="6">
                   <el-form-item label-width="80px" label="SKU:" class="postInfo-container-item">
                     <el-select v-model="postForm.author" :remote-method="getRemoteUserList" filterable default-first-option remote placeholder="input user">
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
@@ -82,14 +82,14 @@
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
                     </el-select>
                   </el-form-item>
-                </el-col>                
+                </el-col>
                 <el-col :span="6">
                   <el-form-item label-width="80px" label="物料号:" class="postInfo-container-item">
                     <el-select v-model="postForm.author" :remote-method="getRemoteUserList" filterable default-first-option remote placeholder="input user">
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
                     </el-select>
                   </el-form-item>
-                </el-col>      
+                </el-col>
               </el-row>
               <el-row>
                 <el-col :span="6">
@@ -99,7 +99,7 @@
                     </el-select>
                   </el-form-item>
                 </el-col>
-               <el-col :span="6">
+                <el-col :span="6">
                   <el-form-item label-width="80px" label="每箱件数:" class="postInfo-container-item">
                     <el-select v-model="postForm.author" :remote-method="getRemoteUserList" filterable default-first-option remote placeholder="input user">
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
@@ -112,18 +112,18 @@
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
                     </el-select>
                   </el-form-item>
-                </el-col>       
+                </el-col>
                 <el-col :span="6">
                   <el-form-item label-width="80px" label="单箱净重:" class="postInfo-container-item">
                     <el-select v-model="postForm.author" :remote-method="getRemoteUserList" filterable default-first-option remote placeholder="input user">
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
                     </el-select>
                   </el-form-item>
-                </el-col>                                  
-              </el-row>              
+                </el-col>
+              </el-row>
             </div>
           </el-col>
-         <el-col :span="24">
+          <el-col :span="24">
             <div class="postInfo-container">
               <el-row>
                 <el-col :span="6">
@@ -133,7 +133,7 @@
                     </el-select>
                   </el-form-item>
                 </el-col>
-               <el-col :span="6">
+                <el-col :span="6">
                   <el-form-item label-width="80px" label="长(CM):" class="postInfo-container-item">
                     <el-select v-model="postForm.author" :remote-method="getRemoteUserList" filterable default-first-option remote placeholder="input user">
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
@@ -146,14 +146,14 @@
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
                     </el-select>
                   </el-form-item>
-                </el-col>      
-               <el-col :span="6">
+                </el-col>
+                <el-col :span="6">
                   <el-form-item label-width="80px" label="高(CM):" class="postInfo-container-item">
                     <el-select v-model="postForm.author" :remote-method="getRemoteUserList" filterable default-first-option remote placeholder="input user">
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
                     </el-select>
                   </el-form-item>
-                </el-col>                                     
+                </el-col>
               </el-row>
               <el-row>
                 <el-col :span="6">
@@ -163,7 +163,7 @@
                     </el-select>
                   </el-form-item>
                 </el-col>
-               <el-col :span="6">
+                <el-col :span="6">
                   <el-form-item label-width="80px" label="单位:" class="postInfo-container-item">
                     <el-select v-model="postForm.author" :remote-method="getRemoteUserList" filterable default-first-option remote placeholder="input user">
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
@@ -176,18 +176,18 @@
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
                     </el-select>
                   </el-form-item>
-                </el-col>               
+                </el-col>
                 <el-col :span="6">
                   <el-form-item label-width="80px" label="币制:" class="postInfo-container-item">
                     <el-select v-model="postForm.author" :remote-method="getRemoteUserList" filterable default-first-option remote placeholder="input user">
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
                     </el-select>
                   </el-form-item>
-                </el-col>             
-              </el-row>              
+                </el-col>
+              </el-row>
             </div>
           </el-col>
-         <el-col :span="24">
+          <el-col :span="24">
             <div class="postInfo-container">
               <el-row>
                 <el-col :span="6">
@@ -197,7 +197,7 @@
                     </el-select>
                   </el-form-item>
                 </el-col>
-               <el-col :span="6">
+                <el-col :span="6">
                   <el-form-item label-width="80px" label="商品名称:" class="postInfo-container-item">
                     <el-select v-model="postForm.author" :remote-method="getRemoteUserList" filterable default-first-option remote placeholder="input user">
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
@@ -210,18 +210,18 @@
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
                     </el-select>
                   </el-form-item>
-                </el-col>       
+                </el-col>
                 <el-col :span="6">
                   <el-form-item label-width="80px" label="目的国:" class="postInfo-container-item">
                     <el-select v-model="postForm.author" :remote-method="getRemoteUserList" filterable default-first-option remote placeholder="input user">
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
                     </el-select>
                   </el-form-item>
-                </el-col>               
+                </el-col>
               </el-row>
               <el-row>
 
-               <el-col :span="6">
+                <el-col :span="6">
                   <el-form-item label-width="100px" label="仓位:" class="postInfo-container-item">
                     <el-select v-model="postForm.author" :remote-method="getRemoteUserList" filterable default-first-option remote placeholder="input user">
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
@@ -234,18 +234,18 @@
                       <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
                     </el-select>
                   </el-form-item>
-                </el-col>                      
-              </el-row>              
+                </el-col>
+              </el-row>
             </div>
           </el-col>
         </el-row>
 
-          <!-- <div style="margin:0 auto;:800px;"> -->
+        <!-- <div style="margin:0 auto;:800px;"> -->
 
-            <el-button style="margin-left: 300px;  width:200px;"  type="success" @click="">确定</el-button>
-            <el-button style="margin-left: 100px; width:200px;" type="success" @click="">清空</el-button>
+        <el-button style="margin-left: 300px;  width:200px;" type="success" @click="">确定</el-button>
+        <el-button style="margin-left: 100px; width:200px;" type="success" @click="">清空</el-button>
 
-          <!-- </div> -->
+        <!-- </div> -->
       </div>
     </el-form>
   </div>

@@ -82,8 +82,8 @@ export const constantRoutes = [
         meta: { title: '仓储管理系统', icon: 'dashboard', affix: true }
       }
     ]
-  },
-  
+  }
+
 ]
 
 /**
