@@ -92,7 +92,6 @@ export const constantRoutes = [
  */
 export const asyncRoutes = [
 
-
   {
     path: '/inbound',
     component: Layout,
@@ -122,7 +121,7 @@ export const asyncRoutes = [
         path: 'list',
         component: () => import('@/views/inbound/list'),
         name: 'ArticleList',
-        meta: { title: '入库查询', icon: 'list' }
+        meta: { title: '入库', icon: 'list' }
       }
     ]
   },
@@ -158,71 +157,69 @@ export const asyncRoutes = [
       }
     ]
   },
-  {
-    path: '/example',
-    component: Layout,
-    redirect: '/example/list',
-    name: 'Example',
-    meta: {
-      title: '报表',
-      icon: 'example'
-    },
-    children: [
-      {
-        path: 'create',
-        component: () => import('@/views/example/create'),
-        name: 'CreateArticle',
-        meta: { title: '对账单', icon: 'list' }
+  // {
+  //   path: '/example',
+  //   component: Layout,
+  //   redirect: '/example/list',
+  //   name: 'Example',
+  //   meta: {
+  //     title: '报表',
+  //     icon: 'example'
+  //   },
+  //   children: [
+  //     {
+  //       path: 'create',
+  //       component: () => import('@/views/example/create'),
+  //       name: 'CreateArticle',
+  //       meta: { title: '对账单', icon: 'list' }
 
-      },
-      {
-        path: 'edit/:id(\\d+)',
-        component: () => import('@/views/example/edit'),
-        name: 'EditArticle',
-        meta: { title: 'Edit Article', noCache: true, activeMenu: '/example/list' },
-        hidden: true
-      },
-      {
-        path: 'list',
-        component: () => import('@/views/example/list'),
-        name: 'ArticleList',
-        meta: { title: '库存报表', icon: 'list' }
-      },
-      {
-        path: 'list',
-        component: () => import('@/views/example/list'),
-        name: 'ArticleList',
-        meta: { title: '收货报表', icon: 'list' }
-      }
-    ]
-  },
-  {
-    path: '/example',
-    component: Layout,
-    redirect: '/example/list',
-    name: 'Example',
-    meta: {
-      title: '系统管理',
-      icon: 'example'
-    },
-    children: [
-      {
-        path: 'create',
-        component: () => import('@/views/example/create'),
-        name: 'CreateArticle',
-        meta: { title: '个人中心', icon: 'list' }
+  //     },
+  //     {
+  //       path: 'edit/:id(\\d+)',
+  //       component: () => import('@/views/example/edit'),
+  //       name: 'EditArticle',
+  //       meta: { title: 'Edit Article', noCache: true, activeMenu: '/example/list' },
+  //       hidden: true
+  //     },
+  //     {
+  //       path: 'list',
+  //       component: () => import('@/views/example/list'),
+  //       name: 'ArticleList',
+  //       meta: { title: '库存报表', icon: 'list' }
+  //     },
+  //     {
+  //       path: 'list',
+  //       component: () => import('@/views/example/list'),
+  //       name: 'ArticleList',
+  //       meta: { title: '收货报表', icon: 'list' }
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/example',
+  //   component: Layout,
+  //   redirect: '/example/list',
+  //   name: 'Example',
+  //   meta: {
+  //     title: '系统管理',
+  //     icon: 'example'
+  //   },
+  //   children: [
+  //     {
+  //       path: 'create',
+  //       component: () => import('@/views/example/create'),
+  //       name: 'CreateArticle',
+  //       meta: { title: '个人中心', icon: 'list' }
 
-      },
-      {
-        path: 'list',
-        component: () => import('@/views/example/list'),
-        name: 'ArticleList',
-        meta: { title: '用户管理', icon: 'list' }
-      }
-    ]
-  },
-
-
+  //     },
+  //     {
+  //       path: 'list',
+  //       component: () => import('@/views/example/list'),
+  //       name: 'ArticleList',
+  //       meta: { title: '用户管理', icon: 'list' }
+  //     }
+  //   ]
+  // },
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]

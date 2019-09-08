@@ -1,7 +1,6 @@
 <template>
   <div class="createPost-container">
     <el-form ref="postForm" :model="postForm" :rules="rules" class="form-container">
-
       <div class="createPost-main-container">
         <el-row>
           <aside>客户信息</aside>
