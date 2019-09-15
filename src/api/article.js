@@ -24,9 +24,9 @@ export function fetchPv(pv) {
   })
 }
 
-export function createArticle(data) {
+export function addStock(data) {
   return request({
-    url: '/article/create',
+    url: '/stock/add',
     method: 'post',
     data
   })
